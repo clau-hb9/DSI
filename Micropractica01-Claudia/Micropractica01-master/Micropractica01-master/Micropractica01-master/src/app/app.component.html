@@ -1,0 +1,78 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+</div>
+
+<div class='box'>
+  <div class='titulo'>COMANDA</div>
+  
+  <div class='fecha'>
+    {{getFecha() | date:'dd-MM-yy HH:mm:ss'}}
+  </div>
+  
+  <div class ='consumicion'>
+  <label>Consumición:</label>
+  <select name='lstConsumicion' [(ngModel)]='alimento' [(ngModel)]='precio'>
+    <option *ngFor='let alim of getAlimentos()' [value]='alim[1]'>{{alim[0]}} ({{alim[1]}})</option>
+  </select>
+
+  
+  
+  <button class='button1' type='button' (click)='addAlimento(1)'>+
+  </button>
+  </div>
+
+  <div class='prod-prec'>
+
+    <div class='producto'>
+        <div class ='fila'>
+          <label>Producto</label>
+        </div>
+
+        <div class ='fila'>
+            <p *ngFor='let linea of pedido; let i=index'>
+            {{linea}}
+            <button class='button3' type='button' >-</button>
+            </p>
+        </div>
+
+        <div class ='fila'>
+          <label id= "total1">TOTAL</label>
+        </div>
+
+    </div>
+ 
+    <div class='precio'>
+      <div class ='fila'>
+          <label>Precio</label>
+      </div>
+
+      <div class ='fila'>
+        <p *ngFor='let linea1 of lista_precios; let i=index'>
+          {{linea1 | currency:'EUR' }}
+          <button class='button3' type='button' >-</button>
+        </p>
+      </div>
+
+      <div class ='fila'>
+        <label id= "total2">{{total| currency:'EUR'}}</label>
+      </div>
+    </div>
+
+    <div class='boton'>
+      
+      <div class ='fila'>
+        <p *ngFor='let linea1 of lista_precios; let i=index'>
+          <button class='button2' type='button' (click)='delAlimento(i)'>-</button>
+        </p>
+      </div>
+
+    </div>
+    
+  </div>
+
+ 
+</div>
+

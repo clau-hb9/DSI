@@ -1,0 +1,138 @@
+$primary-color:rgb(244, 140, 96);
+$border-color:rgb(242, 41, 41);
+$text-color:rgb(0, 0, 0);
+$tam_botones:250px;
+
+$tipoletra:"Times New Roman", Times, serif;
+$estiloletra:bold;
+$tamletra: 30px;
+$margen: 0px 20px;
+$fondo: rgb(230, 229, 229);
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius; 
+    -moz-border-radius: $radius; 
+    -ms-border-radius: $radius; 
+	border-radius: $radius; 
+} 
+
+.elemento{
+	background-color:$primary-color;
+	border-color: $border-color;
+	border-style: solid;
+	border-width: 2px;
+	padding-top: 30px;
+	font-family: $tipoletra;
+	font-weight: $estiloletra;
+	font-size:$tamletra;
+}
+	
+.box{
+	@extend .elemento;
+	@include border-radius(10px);
+	width:70%;
+	height:auto;
+	margin: auto;
+}
+
+.titulo{
+	color:$text-color;
+	text-align:center;
+	font-style: normal;
+	
+}
+	
+.fecha{
+	text-align:center;
+	font-size: 23px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.consumicion{
+	margin: $margen;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+select {
+	width: 60%;
+	height: 30px;
+	margin-left: 8%;
+	background-color: $fondo;
+	border-color: $fondo;
+	font-size: 18px;
+}
+
+.button1{
+	width: 100px;
+	height: 30px;
+	margin-left: 20px;
+	font-size: 20px;
+	background-color: $fondo;
+	border-color: $fondo;
+}
+	
+label {
+	font-weight: normal;
+	font-size: 23px;
+}
+	
+.prod-prec {
+	margin-top: 50px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+	
+.prod-prec label{
+	text-decoration: underline;
+	margin-bottom: 10px;
+}
+
+.prod-prec>div:nth-child(1){
+	width: 65%;
+}
+
+.producto{
+	margin: $margen;
+	font-weight: normal;
+	font-size: 23px;
+}
+	
+.precio{
+	font-weight: normal;
+	font-size: 23px;
+	text-align: left;
+}
+
+.boton{
+	@extend .precio;
+	margin-left: 6%;
+	margin-right: 20px;
+}
+	
+.button2{
+	width: 60px;
+	height: 30px;
+	font-size: 20px;
+	background-color: $fondo;
+	border-color: $fondo;
+}
+
+#total1{
+	text-decoration: none;
+	font-weight: $estiloletra;
+}
+
+#total2{
+	@extend #total1;
+}
+
+.button3{
+	@extend .button2;
+	width: 0px;
+	visibility: hidden;
+}
