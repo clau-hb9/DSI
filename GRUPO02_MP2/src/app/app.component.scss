@@ -1,0 +1,107 @@
+$primary-color:rgb(244, 140, 96);
+$rebaja:red;
+$no-rebaja:green;
+$borders-color: rgba(136, 30, 30, 0.79);
+
+$tipoletra: "Times New Roman", Times, serif;
+$estiloletra: bold;
+$tamletra: 20px;
+$fondo: #f7f6f6;
+$color-botones: rgb(216, 215, 215);
+
+
+h1{
+	font-family: $tipoletra;
+}
+
+.elemento{
+	background-color:$primary-color;
+	border-color: $borders-color;
+	border-style: solid;
+	border-width: 1px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: $tipoletra;
+	font-weight: $estiloletra;
+	font-size:$tamletra;
+}
+	
+.box{
+	@extend .elemento;
+	width: 60%;
+	height:auto;
+	margin:auto;
+}	
+
+.filtro{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+label {
+	font-weight: normal;
+	font-size: $tamletra;
+}
+
+input {
+	width: 70%;
+	height: 28px;
+	margin-left: 3%;
+	background-color: $fondo;
+	border-color: $fondo;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.tabla{
+	width: 90%;
+	margin: auto;
+	display: table;
+	font-size: 18px;
+	text-align: center;
+}
+
+.cabecera .fila {
+	display: table-row;
+}
+
+.cabecera {
+	font-weight: bold;
+	background-color: $borders-color;
+}
+
+.fila {
+	font-weight: normal;
+	height: auto;
+	border-top: 1px solid $borders-color;
+}
+
+.col{
+	width: 15%;
+	display: table-cell;
+	padding: 3px 10px;
+    vertical-align: middle;
+}
+
+button{
+	width: 100%;
+	height: auto;
+	font-size: 15px;
+	background-color: $color-botones;
+}
+
+img{
+	width: 120%;
+}
+
+.rojo{
+	background-color: $rebaja;
+}
+
+.verde{
+	background-color: $no-rebaja;
+}
+	

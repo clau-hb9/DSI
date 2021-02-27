@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+</div>
+
+<div class='box'>
+
+  <div class ='filtro'>
+    <label>Filtrar por:</label>
+      <input type="text" name="filtro" placeholder="(marca de coche)" [(ngModel)]="filtro"/>
+  </div>
+
+  <br/>
+
+  <div class ='tabla'>
+    <div class ='cabecera'>
+      <div class ='col'>Foto</div>
+      <div class ='col'>Marca</div>
+      <div class ='col'>Modelo</div>
+      <div class ='col'>Año</div>
+      <div class ='col'>En venta desde</div>
+      <div class ='col'>Precio</div>
+      <div class ='col'>PVP</div>
+      <div class ='col'>Acciones</div>
+    </div>
+  
+    <div class ='fila' *ngFor='let coche of getFiltro(); let i = index'> 
+      <div class ='col'><img alt="(Sin foto!)" src={{coche[0]}}></div>
+      <div class ='col'>{{coche[1]}}</div>
+      <div class ='col'>{{coche[2]}}</div>
+      <div class ='col'>{{coche[3] |date:'YYYY'}}</div>
+      <div class ='col'>{{coche[4] |date:'MM-YYYY'}}</div>
+      <div class ='col'>
+        <p [ngClass]="{'verde':coche[6]==false, 'rojo':coche[6]==true}">{{coche[5].toFixed(0) | currency:'EUR':'symbol':'1.0-1':'es'}}</p>
+      </div>
+      <div class ='col'>{{(coche[5]*1.21).toFixed(0) | currency:'EUR':'symbol':'1.0-1':'es'}}</div>
+      <div class ='col'>
+        <button (click)='Rebajar(coche[2])'>Rebajar</button>
+        <br/>
+        <button (click)='Vender(coche[2])'>Vendido</button>
+      </div>
+    </div>
+    
+
+  </div>
+
+ 
+</div>
+
