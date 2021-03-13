@@ -1,4 +1,24 @@
 <div class="template-main">
-  Template select2
-<ng-content></ng-content>
+  <!-- Este Comunidad -->
+  <div class = desplegable>
+    Comunidad:
+    {{Comunidad}}
+    <select id='Comunidad' name='Comunidad' >
+      <option [value]="comunidad" *ngFor='let comunidad of Comunidad'> {{comunidad}}</option>
+    </select>
+    <!--<select id='Comunidad' name="Comunidad" >
+      <option value = "1" selected = True> Castilla y León </option>
+      <option value = "2"> Madrid </option>
+      <option value = "3"> Extremadura </option>
+    </select>-->
+  </div>
+
+  <!-- Este Provincia -->
+  <div class = desplegable>
+    Provincia:
+  </div>
+
+<ng-content>
+
+</ng-content>
 </div>

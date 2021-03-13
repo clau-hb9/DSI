@@ -1,32 +1,42 @@
-<div style="text-align:center">
-  <h1>
-    {{ title }}!
-  </h1>
-</div>
 
-<p>Definiendo nuestros propios Custom Elements:</p>
+<div class='box'>
+    <div style="text-align:left; margin-left: 5px; ">
+      <h1>
+        {{ title }}!
+      </h1>
+    </div>
 
+    <p>Definiendo nuestros propios Custom Elements:</p>
 
-<app-select2 [(values)]="values" (changed)="changed_lists($event)" label1="Comunidad" label2="Provincia">
-  <app-option2 id="1" texto="Castilla y León" ></app-option2>
-    <app-option2 id="2" texto="Ávila" idPadre="1"></app-option2>
-    <app-option2 id="3" texto="Segovia" idPadre="1"></app-option2>
-    <app-option2 id="4" texto="Soria" idPadre="1"></app-option2>
-    <app-option2 id="5" texto="Palencia" idPadre="1"></app-option2>
-    <app-option2 id="6" texto="Salamanca" idPadre="1"></app-option2>
-    <app-option2 id="7" texto="León" idPadre="1"></app-option2>
+    <div class = 'desplegable_box'>
+      <app-select2 comunidad = values ></app-select2>
+    </div>
 
 
-  <app-option2 id="8" texto="Madrid"></app-option2>
-    <app-option2 id="9" texto="Madrid" idPadre="8"></app-option2>
 
-  <app-option2 id="10" texto="Extremadura"></app-option2>
-    <app-option2 id="11" texto="Badajoz" idPadre="10"></app-option2>
-    <app-option2 id="12" texto="Cáceres" idPadre="10"></app-option2>
-</app-select2>
+    <!--<app-select2 [(values)]="values" (changed)="changed_lists($event)" label1="Comunidad" label2="Provincia">
+      <app-option2 id="1" texto="Castilla y León" ></app-option2>
+        <app-option2 id="2" texto="Ávila" idPadre="1"></app-option2>
+        <app-option2 id="3" texto="Segovia" idPadre="1"></app-option2>
+        <app-option2 id="4" texto="Soria" idPadre="1"></app-option2>
+        <app-option2 id="5" texto="Palencia" idPadre="1"></app-option2>
+        <app-option2 id="6" texto="Salamanca" idPadre="1"></app-option2>
+        <app-option2 id="7" texto="León" idPadre="1"></app-option2>
 
-<br/>
-Comunidad: {{values[0]}}
-<br/>
-Provincia: {{values[1]}}
 
+      <app-option2 id="8" texto="Madrid"></app-option2>
+        <app-option2 id="9" texto="Madrid" idPadre="8"></app-option2>
+
+      <app-option2 id="10" texto="Extremadura"></app-option2>
+        <app-option2 id="11" texto="Badajoz" idPadre="10"></app-option2>
+        <app-option2 id="12" texto="Cáceres" idPadre="10"></app-option2>
+    </app-select2>-->
+
+    <br/>
+    <p class = "texto">Comunidad: {{values[0]}}</p>
+
+    <p class = "texto">Provincia: {{values[1]}}</p>
+
+
+    <button type= "button"> Get propiedades del CustomElement</button>
+  </div>

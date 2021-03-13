@@ -1,4 +1,4 @@
-import { Component, OnInit,ContentChild,ViewChild,QueryList,ElementRef,AfterViewInit,ContentChildren } from '@angular/core';
+import { Component, OnInit,Input, ContentChild,ViewChild,QueryList,ElementRef,AfterViewInit,ContentChildren } from '@angular/core';
 
 import { option2Component } from '../option2/option2.component';
 
@@ -10,12 +10,18 @@ import { option2Component } from '../option2/option2.component';
 
 export class select2Component implements OnInit {
 
-  values = [];
+  //public valuesComunidades:Array<[string]> = [] ;
+  public indice = 0;
+  @Input() Comunidad:string[];
+  //public Comunidades :string [];
+
 
   @ContentChildren(option2Component) option2!:QueryList<option2Component>;
 
 
+
   constructor() {
+
 
    }
 

@@ -1,6 +1,16 @@
-.template-main{
-  border:3px solid #000000;
-  font-size:16px;
-  margin-bottom:5px;
-  background-color:lightgreen;
+$tipoletra: "Times New Roman", Times, serif;
+
+$tamletra: 18px;
+
+.desplegable{
+float:left;
+width: 50%;
+text-align: center;
+margin-top: 10px;
+}
+
+#Comunidad{
+  width: 40%;
+  font-size: $tamletra;
+  font-family: $tipoletra;
 }

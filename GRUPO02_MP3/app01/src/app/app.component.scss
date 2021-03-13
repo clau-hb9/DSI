@@ -1,0 +1,60 @@
+
+$borders-color: rgba(7, 36, 131, 0.79);
+
+$tipoletra: "Times New Roman", Times, serif;
+$estiloletra: bold;
+$tamletra: 20px;
+$fondo: #f7f6f6;
+$color-botones: rgb(216, 215, 215);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.elemento{
+	background-color:$fondo;
+	border-color: $borders-color;
+	border-style: solid;
+	border-width: 1px;
+	//padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: $tipoletra;
+	//font-weight: $estiloletra;
+	font-size:$tamletra;
+}
+
+.box{
+	@extend .elemento;
+	width: 60%;
+	height:auto;
+	margin:auto;
+}
+
+.desplegable_box{
+  border:1px solid rgba(62, 182, 182, 0.897);
+  font-size:$tamletra;
+  margin-bottom:5px;
+  margin-left: 5px;
+  margin-right: 10px;
+  height: 50px;
+  background-color: rgba(62, 182, 182, 0.897);
+}
+
+p{
+  margin-left: 5px;
+}
+
+button{
+  margin-left: 5px;
+  font-size:$tamletra;
+}
+
+.texto{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
