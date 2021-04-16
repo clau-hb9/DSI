@@ -1,0 +1,55 @@
+
+
+
+<!-- Boton menu
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>-->
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span class="example-spacer"></span>
+  <h1>
+    DIRECTORIO DE CONTACTOS
+  </h1>
+</mat-toolbar>
+
+<h2>
+  Listado General
+</h2>
+
+<!-- Buscador -->
+<div class ='filtro'>
+  <label>Filtrar por:</label>
+    <input type="text" name="filtro" placeholder="Buscar nombres que empiecen por..." [(ngModel)]="filtro"/>
+</div>
+
+<!-- Menu con contactos-->
+<div class='box'>
+  <p-table [value]=getFiltro()>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Tipo</th>
+            <th>Habitual</th>
+            <!--<th>Actions</th>-->
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-contacto>
+        <tr>
+            <td>{{contacto.nombre}}</td>
+            <td>{{contacto.telefono}}</td>
+            <td>{{contacto.email}}</td>
+            <td>{{contacto.tipo}}</td>
+            <td>{{contacto.habitual}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>

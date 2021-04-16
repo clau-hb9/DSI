@@ -1,6 +1,8 @@
-import { Component, OnInit,Input, ContentChild,ViewChild,QueryList,ElementRef,AfterViewInit,ContentChildren } from '@angular/core';
+import { Component, OnInit,Input, ContentChild,ViewChild,QueryList,ElementRef,AfterViewInit,ContentChildren  } from '@angular/core';
 
 import { option2Component } from '../option2/option2.component';
+
+
 
 @Component({
   selector: 'app-select2',
@@ -10,10 +12,11 @@ import { option2Component } from '../option2/option2.component';
 
 export class select2Component implements OnInit {
 
-  //public valuesComunidades:Array<[string]> = [] ;
-  public indice = 0;
-  @Input() Comunidad:string[];
-  //public Comunidades :string [];
+
+  public id_comunidad_seleccionada = 1;
+  public comunidades:Array<[string, number]>=[['Castilla y León',1], ['Madrid',8], ['Extremadura',10]]
+
+
 
 
   @ContentChildren(option2Component) option2!:QueryList<option2Component>;
@@ -29,13 +32,11 @@ export class select2Component implements OnInit {
 
   }
 
+
+
   ngAfterViewInit() {
 
-    //Se muestran 3 formas distintas de acceder a los elementos de la lista:
 
-    for (let option2 of this.option2.toArray()) {
-      //console.log(option2.x);
-    }
 
 
   }

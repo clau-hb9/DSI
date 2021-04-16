@@ -1,21 +1,23 @@
 <div class="template-main">
-  <!-- Este Comunidad -->
+
+  <!-- COMUNIDAD -->
   <div class = desplegable>
     Comunidad:
-    {{Comunidad}}
-    <select id='Comunidad' name='Comunidad' >
-      <option [value]="comunidad" *ngFor='let comunidad of Comunidad'> {{comunidad}}</option>
+
+    <select name='Comunidad' [(ngModel)]="id_comunidad_seleccionada">
+      <option [value]='comunidad' *ngFor='let comunidad of comunidades' > {{comunidad[0]}} </option>
     </select>
-    <!--<select id='Comunidad' name="Comunidad" >
-      <option value = "1" selected = True> Castilla y León </option>
-      <option value = "2"> Madrid </option>
-      <option value = "3"> Extremadura </option>
-    </select>-->
   </div>
 
-  <!-- Este Provincia -->
+  <!-- PROVINCIA -->
   <div class = desplegable>
     Provincia:
+    <select name='Provincia' >
+      <option [value]='option' *ngFor='let option of option2' > {{option.texto}} </option>
+    </select>
+
+
+
   </div>
 
 <ng-content>

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Micropráctica 03';
 
-  values = ['Castilla y León',"Madrid"];
+  values = ['Castilla y León', 'Madrid', 'Extremadura'];
 }
 
 

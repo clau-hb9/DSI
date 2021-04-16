@@ -1,0 +1,37 @@
+$primary-color:rgb(233, 227, 224);
+$border-color:rgb(228, 213, 213);
+$text-color:rgb(0, 0, 0);
+
+$tipoletra: "Times New Roman", Times, serif;
+$estiloletra:bold;
+$tamletra: 30px;
+$margen: 20px 20px;
+$fondo: rgb(230, 229, 229);
+
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+	border-radius: $radius;
+}
+.elemento{
+	background-color:$primary-color;
+	border-color: $border-color;
+	border-style: solid;
+	border-width: 2px;
+	padding-top: 30px;
+	font-family: $tipoletra;
+	font-weight: $estiloletra;
+	font-size:$tamletra;
+}
+.box{
+	@extend .elemento;
+	@include border-radius(10px);
+	width:80%;
+	height:auto;
+	margin: auto;
+}
+table {
+  width: 90%;
+}

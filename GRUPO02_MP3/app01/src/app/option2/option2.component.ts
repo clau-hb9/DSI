@@ -9,9 +9,12 @@ import { Component, OnInit,Directive,Input } from '@angular/core';
 
 export class option2Component implements OnInit {
 
-  @Input() public id:string;
-  @Input() public texto:string;
-  @Input() public idPadre:string;
+  @Input() id:string;
+  @Input() texto:string;
+  @Input() idPadre:string;
+  public provincias:Array<[string,string,string]> = [];
+
+
 
 
 
